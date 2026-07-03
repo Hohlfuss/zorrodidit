@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cp src/registration.html dist/",
     "start": "node dist/main.js"
   },
   "keywords": [],
