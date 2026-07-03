@@ -8,7 +8,7 @@ app.get("/", (req: Request, res: Response) => {
     res.send("typescript express serveri");
 });
 
-app.get("./register.html", (req: request, res: Response) => {
+app.get("./register.html", (req: Request, res: Response) => {
     res.send(path.join(__dirname, "../src/register.html"));
 })
 
