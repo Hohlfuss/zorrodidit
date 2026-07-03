@@ -132,18 +132,24 @@ const handleRegister = async () => {
   const payload = { username: username.value, email: email.value, password: password.value };
 
   try {
-    await new Promise(resolve => setTimeout(resolve, 800));
-    console.log("Ready to send payload to Express backend: ", payload);
-    alert("Validation passed! Check console for payload.");
-    
-    username.value = "";
-    email.value = "";
-    password.value = "";
-    confirmPassword.value = "";
-  } catch (error) {
-    errorMessage.value = "Something went wrong connecting to the server.";
-  } finally {
-    isSubmitting.value = false;
+    const response = await fetch("https://zorrodidit-backend.onrender.com/api/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application.json",
+      },
+      body:JSON.stringify(payload),
+    });
+
+    const data = await response.json();
+
+    if  (response.ok) {
+      alert("Onnistui: " + data.message);
+      // clear form
+    } else {
+      errorMessage.value = data.message || "Rekisteröinti epäonnistui";
+    }
+  } catch(error) {
+    errorMessage.value = "Ei yhdistänyt serveriin";
   }
 };
 </script>
