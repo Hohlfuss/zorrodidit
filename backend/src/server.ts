@@ -25,13 +25,13 @@ app.get("/", (req: Request, res: Response) => {
 
 app.post("/api/register", async(req: Request, res: Response) =>{
     //1. extract the payloadd sent from vue
-    const { username, email, password } = req.body;
+    const { username, password } = req.body;
     
     console.log("Received new registration request:");
-    console.log(`Username: ${username}, Email: ${email}`);
+    console.log(`Username: ${username}`);
 
     //2. basic backed validation
-    if (!username || !email || !password) {
+    if (!username || !password) {
         return res.status(400).json({
             success: false,
             message: "Missing required fields"
@@ -47,7 +47,6 @@ app.post("/api/register", async(req: Request, res: Response) =>{
             .insert([
                 {
                     username: username,
-                    email: email,
                     password_hash: passwordHash
                 }
             ])

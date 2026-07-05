@@ -10,8 +10,7 @@
         <div class="w-14 h-14 bg-slate-950 border border-slate-800 rounded-xl flex items-center justify-center mb-3 shadow-lg shadow-blue-500/20 ring-1 ring-blue-500/30">
           <span class="text-blue-500 text-2xl font-black">Z</span>
         </div>
-        <h2 class="text-2xl text-white font-bold tracking-wide">zorrodidit</h2>
-        <p class="text-slate-400 text-sm mt-1">Join zorrodidit today!</p>
+        <h2 class="text-2xl text-white font-bold tracking-wide">Zorro did it!</h2>
       </div>
       
       <div v-if="errorMessage" class="mb-4 p-3 bg-red-950/50 border border-red-500/50 text-red-200 rounded-lg text-sm text-center">
@@ -33,22 +32,6 @@
               class="w-full pl-10 p-3 bg-slate-950/50 border border-slate-800 text-white rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder-slate-600"
               placeholder="Username (3+ chars)"
             />
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-slate-300 text-sm mb-1.5 ml-1" for="email">Email Address</label>
-          <div class="relative">
-             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <span class="text-slate-500 text-lg">✉</span>
-            </div>
-            <input 
-              id="email"
-              v-model="email"
-              type="email"
-              class="w-full pl-10 p-3 bg-slate-950/50 border border-slate-800 text-white rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder-slate-600"
-              placeholder="you@example.com"
-            />     
           </div>
         </div>
 
@@ -109,7 +92,6 @@
 import { ref } from "vue";
 
 const username = ref("");
-const email = ref("");
 const password = ref("");
 const confirmPassword = ref("");
 const errorMessage = ref("");
@@ -118,7 +100,7 @@ const isSubmitting = ref(false);
 const handleRegister = async () => {
   errorMessage.value = "";
 
-  if (!username.value || !email.value || !password.value || !confirmPassword.value) {
+  if (!username.value || !password.value || !confirmPassword.value) {
     errorMessage.value = "Please fill all fields.";
     return;
   }
@@ -129,7 +111,7 @@ const handleRegister = async () => {
   }
 
   isSubmitting.value = true;
-  const payload = { username: username.value, email: email.value, password: password.value };
+  const payload = { username: username.value, password: password.value };
 
   try {
     const response = await fetch("https://zorrodidit-backend.onrender.com/api/register", {

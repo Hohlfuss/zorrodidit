@@ -1,0 +1,14 @@
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+.env.*
+
+# Compiled TypeScript output
+dist/
+src/**/*.js
+
+# System files
+.DS_Store
+Thumbs.db
