@@ -89,6 +89,7 @@
 </template>
 
 <script setup lang="ts">
+
 import { ref } from "vue";
 
 const username = ref("");
@@ -96,9 +97,11 @@ const password = ref("");
 const confirmPassword = ref("");
 const errorMessage = ref("");
 const isSubmitting = ref(false);
+const payload = { username: username.value, password: password.value };
 
 const handleRegister = async () => {
   errorMessage.value = "";
+  isSubmitting.value = true;
 
   if (!username.value || !password.value || !confirmPassword.value) {
     errorMessage.value = "Please fill all fields.";
@@ -109,9 +112,6 @@ const handleRegister = async () => {
     errorMessage.value = "Passwords do not match.";
     return;
   }
-
-  isSubmitting.value = true;
-  const payload = { username: username.value, password: password.value };
 
   try {
     const response = await fetch("https://zorrodidit-backend.onrender.com/api/register", {
@@ -124,14 +124,19 @@ const handleRegister = async () => {
 
     const data = await response.json();
 
-    if  (response.ok) {
-      alert("Onnistui: " + data.message);
-      // clear form
-    } else {
-      errorMessage.value = data.message || "Rekisteröinti epäonnistui";
+    if (!response.ok) {
+      errorMessage.value = data.message  || "Registeration failed";
+
+      payload.username = "";
+      payload.password = "";
+
+      return;
     }
+
+    console.log("User created successfully: ", data);
+
   } catch(error) {
-    errorMessage.value = "Ei yhdistänyt serveriin";
+    errorMessage.value = "An error occured. Please try again later.";
   }
 };
 </script>
