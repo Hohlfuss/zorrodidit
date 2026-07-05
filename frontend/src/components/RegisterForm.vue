@@ -65,8 +65,8 @@
               placeholder="••••••••"
             />              
           </div>
-          <p v-if="password && confirmPassword" class="text-xs mt-2 ml-1" :class="password === confirmPassword ? 'text-green-400' : 'text-red-400'">
-            {{ password === confirmPassword ? '✓ Passwords match' : '✗ Passwords do not match' }}
+          <p v-if="payload.password && confirmPassword" class="text-xs mt-2 ml-1" :class="payload.password === confirmPassword ? 'text-green-400' : 'text-red-400'">
+            {{ payload.password === confirmPassword ? '✓ Passwords match' : '✗ Passwords do not match' }}
           </p>
         </div>
 
@@ -91,25 +91,28 @@
 <script setup lang="ts">
 
 import { ref } from "vue";
+import { reactive } from "vue";
 
-const username = ref("");
-const password = ref("");
+const payload = reactive({
+  username: "",
+  password: ""
+});
 const confirmPassword = ref("");
 const errorMessage = ref("");
 const isSubmitting = ref(false);
-const payload = { username: username.value, password: password.value };
+//const payload = { username: username.value, password: password.value };
 
 const handleRegister = async () => {
   errorMessage.value = "";
   isSubmitting.value = true;
 
-  if (!username.value || !password.value || !confirmPassword.value) {
+  if (!payload.username || !payload.password || !confirmPassword.value) {
     errorMessage.value = "Please fill all fields.";
     isSubmitting.value = false;
     return;
   }
 
-  if (password.value !== confirmPassword.value) {
+  if (payload.password !== confirmPassword.value) {
     errorMessage.value = "Passwords do not match.";
     isSubmitting.value = false;
     return;
