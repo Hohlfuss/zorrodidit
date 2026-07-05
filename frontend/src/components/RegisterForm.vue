@@ -105,11 +105,13 @@ const handleRegister = async () => {
 
   if (!username.value || !password.value || !confirmPassword.value) {
     errorMessage.value = "Please fill all fields.";
+    isSubmitting.value = false;
     return;
   }
 
   if (password.value !== confirmPassword.value) {
     errorMessage.value = "Passwords do not match.";
+    isSubmitting.value = false;
     return;
   }
 
@@ -136,7 +138,9 @@ const handleRegister = async () => {
     console.log("User created successfully: ", data);
 
   } catch(error) {
-    errorMessage.value = "An error occured. Please try again later.";
+    errorMessage.value = "An network error occured. Please try again later.";
+  } finally {
+    isSubmitting.value = false;
   }
 };
 </script>
