@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-slate-950 flex items-center justify-center p-4 relative overflow-hidden">
     
    <!-- New v4 syntax -->
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-120 h-120 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-120 h-120 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="bg-slate-900/80 backdrop-blur-xl p-8 rounded-2xl shadow-2xl shadow-blue-900/20 w-full max-w-md border border-slate-800 relative z-10">
       
@@ -27,10 +27,10 @@
             </div>
             <input
               id="username"
-              v-model="username"
+              v-model="payload.username"
               type="text"
               class="w-full pl-10 p-3 bg-slate-950/50 border border-slate-800 text-white rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder-slate-600"
-              placeholder="Username (3+ chars)"
+              placeholder="Username"
             />
           </div>
         </div>
@@ -43,7 +43,7 @@
             </div>
             <input 
               id="password"
-              v-model="password"
+              v-model="payload.password"
               type="password"
               class="w-full pl-10 p-3 bg-slate-950/50 border border-slate-800 text-white rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder-slate-600"
               placeholder="••••••••"
