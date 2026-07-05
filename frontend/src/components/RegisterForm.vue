@@ -115,6 +115,8 @@ const handleRegister = async () => {
     return;
   }
 
+  console.log("Sending payload:", JSON.stringify(payload));
+  
   try {
     const response = await fetch("https://zorrodidit-backend.onrender.com/api/register", {
       method: "POST",
