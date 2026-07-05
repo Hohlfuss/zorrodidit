@@ -72,6 +72,45 @@ app.post("/api/register", async(req: Request, res: Response) =>{
     }
 );
 
+app.post("/api/login", async(req: Request, res: Response) => {
+
+    const { username, password } = req.body;
+
+    if (!username || !password) {
+        return res.status(400).json({ success: false, message: "Missing username or password"});
+    }
+
+    try {
+
+        const { data: users, error } = await supabase
+            .from("users")
+            .select("*")
+            .eq("username", username)
+            .limit(1);
+
+        if (error || !users || users.length === 0) {
+            return res.status(401).json({ success: false, message: "Invalid username or password"});
+        }
+
+        const user = users[0];
+
+        const isMatch = await bcrypt.compare(password, user.password_hash);
+
+        if (!isMach) {
+            return res.status(401).json({ success: false, message: "Invalid username or password"});
+        }
+
+        return res.status(200).json({
+            success: true,
+            message: "Login successful",
+            username: user.username
+        });
+    } catch (error) {
+        console.log("Login Error: ", erorror);
+        return res.status(500).json({ success: false, message: "Internal server error"});
+    }
+})
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
