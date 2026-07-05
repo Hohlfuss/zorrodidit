@@ -96,7 +96,7 @@ app.post("/api/login", async(req: Request, res: Response) => {
 
         const isMatch = await bcrypt.compare(password, user.password_hash);
 
-        if (!isMach) {
+        if (!isMatch) {
             return res.status(401).json({ success: false, message: "Invalid username or password"});
         }
 
@@ -106,7 +106,7 @@ app.post("/api/login", async(req: Request, res: Response) => {
             username: user.username
         });
     } catch (error) {
-        console.log("Login Error: ", erorror);
+        console.log("Login Error: ", error);
         return res.status(500).json({ success: false, message: "Internal server error"});
     }
 })
