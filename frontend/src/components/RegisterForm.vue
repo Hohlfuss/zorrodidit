@@ -117,8 +117,6 @@ const handleRegister = async () => {
     isSubmitting.value = false;
     return;
   }
-
-  console.log("Sending payload:", JSON.stringify(payload));
   
   try {
     const response = await fetch("https://zorrodidit-backend.onrender.com/api/register", {
@@ -136,6 +134,7 @@ const handleRegister = async () => {
 
       payload.username = "";
       payload.password = "";
+      confirmPassword.value = "";
 
       return;
     }
