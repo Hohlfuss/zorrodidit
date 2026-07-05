@@ -16,6 +16,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 app.use(cors({
     origin: "https://zorrodidit.uk"
 }));
+
 app.use(express.json());
 
 app.get("/", (req: Request, res: Response) => {
