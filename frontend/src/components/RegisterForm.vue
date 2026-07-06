@@ -80,9 +80,9 @@
         </button>
       </form>
 
-      <p class="mt-8 text-slate-400 text-sm text-center">
-        Already a member?
-        <a href="#" class="text-blue-400 hover:text-blue-300 hover:underline transition-colors">Sign In</a>
+      <p class="mt-4 text-center">
+        Already have an account? 
+        <router-link to="/login" class="text-blue-500">Sign in here</router-link>
       </p>
     </div>
   </div>

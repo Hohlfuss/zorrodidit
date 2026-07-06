@@ -15,6 +15,10 @@
 
     <p v-if="errorMessage" class="text-red-500 mt-2 text-sm">{{ errorMessage }}</p>
   </div>
+  <p class="mt-4 text-center">
+    Dont have an account? 
+    <router-link to="/register" class="text-blue-500">Sign up here</router-link>
+  </p>
 </template>
 
 <script setup>
