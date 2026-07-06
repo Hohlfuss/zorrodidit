@@ -68,7 +68,7 @@ const handleLogin = async () => {
     }
 
     console.log("Login Succesfull Token: ", data.token);
-    router.push("/catalog")
+    router.push("/catalog");
 
   } catch (error) {
     errorMessage.value = "Network error. Please try again later.";
