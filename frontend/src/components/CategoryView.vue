@@ -67,7 +67,7 @@ import 'swiper/css/navigation';
 import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
 
 // sienet
-import sieni1 from "@/assets/sienet/sieni1.png";
+import sieni1 from "../assets/sienet/sieni1.png";
 
 // Tell the Swiper component to use these modules
 const modules = [EffectFlip, Pagination, Navigation];
