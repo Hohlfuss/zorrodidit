@@ -8,7 +8,7 @@ const routes = [
   { path: "/register", component: RegisterForm },
   { path: "/login", component: LoginForm },
   { path: "/catalog", component: CatalogView},
-  { path: "/category", component: CategoryView},
+  { path: "/category/:id", component: CategoryView},
   { path: "/", redirect: "/register"}
 ];
 
