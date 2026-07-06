@@ -66,6 +66,7 @@ import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
 import sieni1 from "../assets/sienet/sieni1.png";
 import sieni2 from "../assets/sienet/sieni2.png";
 import sieni3 from "../assets/sienet/sieni3.png";
+import sieni4 from "../assets/sienet/sieni4.png";
 
 // Tell the Swiper component to use these modules
 const modules = [EffectFlip, Pagination, Navigation];
@@ -95,6 +96,13 @@ const items = ref([
     material: "cotton and acrylic",
     date: "18.3.2026",
     image: sieni3
+  },
+  {
+    id: 4,
+    title: "self of mushrooms",
+    description: "a bunch of mushrooms i made",
+    material: "mix",
+    image: sieni4
   }
 ]);
 </script>
