@@ -29,12 +29,8 @@
           
           <img v-if="item.image" :src="item.image" class="w-full h-full object-contain" :alt="item.title" />
           
-          <span v-else>
-            {{ item.emoji }}
-          </span>
-          
           <div class="absolute top-4 right-4 bg-slate-950/60 backdrop-blur-md px-3 py-1 rounded-full text-xs text-white border border-slate-700">
-            {{ item.date || item.year }}
+            {{ item.date }}
           </div>
         </div>
 
@@ -68,6 +64,8 @@ import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
 
 // sienet
 import sieni1 from "../assets/sienet/sieni1.png";
+import sieni2 from "../assets/sienet/sieni2.png";
+import sieni3 from "../assets/sienet/sieni3.png";
 
 // Tell the Swiper component to use these modules
 const modules = [EffectFlip, Pagination, Navigation];
@@ -84,19 +82,19 @@ const items = ref([
   },
   {
     id: 2,
-    title: "Autumn Brown Cap",
-    description: "A realistic woodland mushroom featuring intricate gills underneath and a textured, ribbed stem.",
-    material: "Merino Wool Blend",
-    year: "2025",
-    emoji: "🍂"
+    title: "Keychain redhat",
+    description: "A small mushroom attached to a keychain.",
+    material: "cotton and acrylic",
+    date: "4.5.2026",
+    image: sieni2
   },
   {
     id: 3,
-    title: "Glowing Neon Shroom",
-    description: "An experimental piece using special UV-reactive yarn that glows brightly under a blacklight.",
-    material: "Acrylic Neon Yarn",
-    year: "2026",
-    emoji: "✨"
+    title: "Mushroom 3",
+    description: "White cotton base and red acrylic hat.",
+    material: "cotton and acrylic",
+    date: "18.3.2026",
+    image: sieni3
   }
 ]);
 </script>
