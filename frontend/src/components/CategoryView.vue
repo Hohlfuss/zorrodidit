@@ -26,10 +26,10 @@
         class="bg-slate-900/80 backdrop-blur-xl border border-slate-800 rounded-2xl overflow-hidden flex flex-col"
       >
         <div class="h-2/3 w-full bg-slate-800/50 flex items-center justify-center text-7xl relative shadow-inner">
-          {{ item.emoji }}
+          {{ item.image }}
           
           <div class="absolute top-4 right-4 bg-slate-950/60 backdrop-blur-md px-3 py-1 rounded-full text-xs text-white border border-slate-700">
-            {{ item.year }}
+            {{ item.date }}
           </div>
         </div>
 
@@ -71,8 +71,8 @@ const items = ref([
     title: "Classic Red Toadstool",
     description: "A traditional fairy-tale mushroom with white spots. Firmly stuffed so it stands perfectly on its own.",
     material: "100% Organic Cotton",
-    year: "2024",
-    emoji: "🍄"
+    date: "5.5.2026",
+    image: "./assets/sienet/sieni1.png"
   },
   {
     id: 2,
