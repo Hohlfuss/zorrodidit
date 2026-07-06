@@ -10,8 +10,7 @@
         <div class="w-14 h-14 bg-slate-950/30 border border-slate-800 rounded-xl flex items-center justify-center mb-3 shadow-lg shadow-blue-500/20 ring-1 ring-blue-500/30">
           <span class="text-blue-500 text-2xl font-black">Z</span>
         </div>
-        <h2 class="text-2xl text-white font-bold tracking-wide">Zorro did it!</h2>
-        <h3 class="text-sm text-slate-400 mt-1">Create your account</h3>
+        <h2 class="text-2xl text-white font-bold tracking-wide">Create account</h2>
       </div>
       
       <div v-if="errorMessage" class="mb-4 p-3 bg-red-950/50 border border-red-500/50 text-red-200 rounded-lg text-sm text-center">
