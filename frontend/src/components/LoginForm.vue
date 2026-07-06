@@ -17,7 +17,7 @@
         {{ errorMessage }}
       </div>
 
-      <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg">
+      <div class="p-6 max-w-sm mx-auto bg-slate-900/50 border border-slate-800 rounded-xl shadow-lg">
         <h2 class="text-xl font-bold mb-4">Sign In</h2>
 
         <input v-model="payload.username" type="text" placeholder="Username" class="w-full p-2 mb-2 border rounded" />
@@ -40,31 +40,6 @@
     </div>
   </div>
 </template>
-
-<!--
-<template>
-  <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg">
-    <h2 class="text-xl font-bold mb-4">Sign In</h2>
-
-    <input v-model="payload.username" type="text" placeholder="Username" class="w-full p-2 mb-2 border rounded" />
-    <input v-model="payload.password" type="password" placeholder="********" class="w-full p-2 mb-4 border rounded" />
-
-    <button
-      @click="handleLogin"
-      :disabled="isSubmitting"
-      class="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:bg-gray-400"
-    >
-    {{ isSubmitting ? "Signing in..." : "Sign In" }}
-    </button>
-
-    <p v-if="errorMessage" class="text-red-500 mt-2 text-sm">{{ errorMessage }}</p>
-  </div>
-  <p class="mt-4 text-center">
-    Dont have an account? 
-    <router-link to="/register" class="text-blue-500">Sign up here</router-link>
-  </p>
-</template>
--->
 
 <script setup>
 
