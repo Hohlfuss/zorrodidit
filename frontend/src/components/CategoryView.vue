@@ -69,6 +69,7 @@ import sieni4 from "../assets/sienet/sieni4.png";
 import sieni5 from "../assets/sienet/sieni5.png";
 import sieni6 from "../assets/sienet/sieni6.png";
 import sieni7 from "../assets/sienet/sieni7.png";
+import sieni8 from "../assets/sienet/sieni8.png";
 
 // Tell the Swiper component to use these modules
 const modules = [EffectFlip, Pagination, Navigation];
@@ -130,6 +131,14 @@ const items = ref([
     material: "acrylic",
     date: "20.1.2026",
     image: sieni7
+  },
+  {
+    id: 8,
+    title: "Thick",
+    description: "asdasd",
+    material: "mix",
+    date: "19.12.2025",
+    image: sieni8
   }
 ]);
 </script>
