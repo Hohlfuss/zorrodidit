@@ -27,7 +27,7 @@ import { reactive, ref } from "vue";
 
 const payload = reactive({ username: "", password: ""});
 const errorMessage = ref("");
-const isSubmitting = ref("");
+const isSubmitting = ref(false);
 
 const handleLogin = async () => {
   errorMessage.value = "";
