@@ -18,10 +18,10 @@
       </div>
 
       <div class="p-6 max-w-sm mx-auto bg-slate-900/50 border border-slate-800 rounded-xl shadow-lg">
-        <h2 class="text-xl font-bold mb-4">Sign In</h2>
+        <h2 class="text-lg text-white font-bold mb-4">Sign In</h2>
 
-        <input v-model="payload.username" type="text" placeholder="Username" class="w-full p-2 mb-2 border rounded" />
-        <input v-model="payload.password" type="password" placeholder="********" class="w-full p-2 mb-4 border rounded" />
+        <input v-model="payload.username" type="text" placeholder="Username" class="w-full pl-10 p-3 bg-slate-950/50 border border-slate-800 text-white rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder-slate-600" />
+        <input v-model="payload.password" type="password" placeholder="********" class="w-full pl-10 p-3 bg-slate-950/50 border border-slate-800 text-white rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder-slate-600" />
 
         <button
           @click="handleLogin"
