@@ -68,9 +68,9 @@ const modules = [EffectFlip, Pagination, Navigation];
 const items = ref([
   {
     id: 1,
-    title: "Classic Red Toadstool",
-    description: "A traditional fairy-tale mushroom with white spots. Firmly stuffed so it stands perfectly on its own.",
-    material: "100% Organic Cotton",
+    title: "Curly greenhat",
+    description: "white base and long green curly hat.",
+    material: "cotton and acrylic",
     date: "5.5.2026",
     image: "./assets/sienet/sieni1.png"
   },
