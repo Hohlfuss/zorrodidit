@@ -26,10 +26,15 @@
         class="bg-slate-900/80 backdrop-blur-xl border border-slate-800 rounded-2xl overflow-hidden flex flex-col"
       >
         <div class="h-2/3 w-full bg-slate-800/50 flex items-center justify-center text-7xl relative shadow-inner">
-          {{ item.image }}
+          
+          <img v-if="item.image" :src="item.image" class="w-full h-full object-cover" :alt="item.title" />
+          
+          <span v-else>
+            {{ item.emoji }}
+          </span>
           
           <div class="absolute top-4 right-4 bg-slate-950/60 backdrop-blur-md px-3 py-1 rounded-full text-xs text-white border border-slate-700">
-            {{ item.date }}
+            {{ item.date || item.year }}
           </div>
         </div>
 
