@@ -33,7 +33,7 @@
           </div>
         </div>
 
-        <div class="h-1/4 p-3 flex flex-col justify-center border-t border-slate-800">
+        <div class="h-1/5 p-3 flex flex-col justify-center border-t border-slate-800">
           <h2 class="text-xl font-bold text-white mb-1">{{ item.title }}</h2>
           <p class="text-slate-400 text-sm mb-2 line-clamp-2">{{ item.description }}</p>
           <div class="text-xs text-blue-400 font-mono tracking-widest uppercase">
@@ -68,6 +68,7 @@ import sieni3 from "../assets/sienet/sieni3.png";
 import sieni4 from "../assets/sienet/sieni4.png";
 import sieni5 from "../assets/sienet/sieni5.png";
 import sieni6 from "../assets/sienet/sieni6.png";
+import sieni7 from "../assets/sienet/sieni7.png";
 
 // Tell the Swiper component to use these modules
 const modules = [EffectFlip, Pagination, Navigation];
@@ -121,6 +122,14 @@ const items = ref([
     material: "mix",
     date: "4.3.2026",
     image: sieni6
+  },
+  {
+    id: 7,
+    title: "white one",
+    description: "White with a little black on the hat",
+    material: "acrylic",
+    date: "20.1.2026",
+    image: sieni7
   }
 ]);
 </script>
