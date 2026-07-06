@@ -1,15 +1,14 @@
 <template>
-  <div class="max-w-md mx-auto p-4 pt-20 relative z-10">
+  <div class="max-w-md mx-auto p-2 pt-10 relative z-10">
     
-    <div class="flex items-center justify-between mb-8">
+    <div class="flex items-center justify-between mb-4">
       <router-link to="/catalog" class="text-blue-400 hover:text-blue-300 flex items-center transition-colors font-semibold">
         <span class="mr-2">←</span> Back to Collection
       </router-link>
     </div>
 
-    <div class="text-center mb-8">
+    <div class="text-center mb-2">
       <h1 class="text-3xl font-black text-white tracking-wide">🍄 Mushrooms</h1>
-      <p class="text-slate-400 mt-1">Swipe to flip the pages</p>
     </div>
 
     <swiper
