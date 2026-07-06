@@ -27,7 +27,7 @@
       >
         <div class="h-2/3 w-full bg-slate-800/50 flex items-center justify-center text-7xl relative shadow-inner">
           
-          <img v-if="item.image" :src="item.image" class="w-full h-full object-cover" :alt="item.title" />
+          <img v-if="item.image" :src="item.image" class="w-full h-full object-contain p-6" :alt="item.title" />
           
           <span v-else>
             {{ item.emoji }}
