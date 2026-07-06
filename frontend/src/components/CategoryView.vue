@@ -77,7 +77,7 @@ const items = ref([
     description: "white base and long green curly hat.",
     material: "cotton and acrylic",
     date: "5.5.2026",
-    image: "./assets/sienet/sieni1.png"
+    image: "frontend/src/assets/sienet/sieni1.png"
   },
   {
     id: 2,
