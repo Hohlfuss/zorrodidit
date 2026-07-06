@@ -33,7 +33,7 @@
           </div>
         </div>
 
-        <div class="h-1/4 p-2 flex flex-col justify-center border-t border-slate-800">
+        <div class="h-1/5 p-2 flex flex-col justify-center border-t border-slate-800">
           <h2 class="text-xl font-bold text-white mb-1">{{ item.title }}</h2>
           <p class="text-slate-400 text-sm mb-2 line-clamp-2">{{ item.description }}</p>
           <div class="text-xs text-blue-400 font-mono tracking-widest uppercase">
