@@ -43,6 +43,7 @@
 <script setup>
 
 import { reactive, ref } from "vue";
+import router from "../router";
 
 const payload = reactive({ username: "", password: ""});
 const errorMessage = ref("");
@@ -67,6 +68,8 @@ const handleLogin = async () => {
     }
 
     console.log("Login Succesfull Token: ", data.token);
+    router.push("/catalog")
+
   } catch (error) {
     errorMessage.value = "Network error. Please try again later.";
   } finally {
