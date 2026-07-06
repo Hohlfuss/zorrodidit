@@ -1,9 +1,9 @@
 <template>
-  <div class="max-w-md mx-auto p-2 pt-10 relative z-10">
+  <div class="max-w-md mx-auto p-2 pt-5 relative z-10">
     
-    <div class="flex items-center justify-between mb-4">
+    <div class="flex items-center justify-between mb-2">
       <router-link to="/catalog" class="text-blue-400 hover:text-blue-300 flex items-center transition-colors font-semibold">
-        <span class="mr-2">←</span> Back to Collection
+        <span class="mr-2 text-2xl">←</span> Back to Collection
       </router-link>
     </div>
 
