@@ -18,7 +18,7 @@
       :pagination="true"
       :navigation="true"
       :modules="modules"
-      class="w-full aspect-3/4 rounded-2xl shadow-2xl shadow-blue-900/20"
+      class="w-full aspect-[3/4] rounded-2xl shadow-2xl shadow-blue-900/20"
     >
       <swiper-slide 
         v-for="item in items" 
@@ -77,7 +77,7 @@ const items = ref([
     description: "white base and long green curly hat.",
     material: "cotton and acrylic",
     date: "5.5.2026",
-    image: "frontend/src/assets/sienet/sieni1.png"
+    image: "../assets/sienet/sieni1.png"
   },
   {
     id: 2,
