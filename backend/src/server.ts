@@ -51,25 +51,24 @@ app.post("/api/register", async(req: Request, res: Response) =>{
             ])
             .select();
 
-            if (error) {
-                if (error.code === "23505" || error.message.includes("user_username_key")) {
-                    return res.status(409).json({
-                        success: false,
-                        message: "That username is already taken. Please choose another one."
-                    })
-                }
-                console.error("datbase error", error);
-                return res.status(500).json({ success: false, message: error.message });
+        if (error) {
+            if (error.code === "23505" || error.message.includes("users_username_key")) {
+                return res.status(409).json({
+                    success: false,
+                    message: "That username is already taken. Please choose another one."
+                });
             }
-
-            console.log("User created: ", data);
-            return res.status(201).json({ success: true, message: "User created successfully"});
-        } catch (error) {
-            console.error("server error", error);
-            res.status(500).json({ success: false, message: "internal server error"});
+            console.error("datbase error", error);
+            return res.status(500).json({ success: false, message: error.message });
         }
+
+        console.log("User created: ", data);
+        return res.status(201).json({ success: true, message: "User created successfully"});
+    } catch (error) {
+        console.error("server error", error);
+        return res.status(500).json({ success: false, message: "internal server error"});
     }
-);
+});
 
 app.post("/api/login", async(req: Request, res: Response) => {
 

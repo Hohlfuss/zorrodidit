@@ -90,9 +90,10 @@
 
 <script setup lang="ts">
 
-import { ref } from "vue";
-import { reactive } from "vue";
+import { ref, reactive } from "vue";
+import { useRouter } from "vue-router";
 
+const router = useRouter();
 const payload = reactive({
   username: "",
   password: ""
@@ -140,6 +141,7 @@ const handleRegister = async () => {
     }
 
     console.log("User created successfully: ", data);
+    router.push("/login");
 
   } catch(error) {
     errorMessage.value = "An network error occured. Please try again later.";
