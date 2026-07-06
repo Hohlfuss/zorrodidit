@@ -8,7 +8,7 @@
       
       <div class="flex flex-col items-center mb-8">
         <div class="w-14 h-14 bg-slate-950/30 border border-slate-800 rounded-xl flex items-center justify-center mb-3 shadow-lg shadow-blue-500/20 ring-1 ring-blue-500/30">
-          <img src="../assets/zorro-kuva_transparent.png" class="w-10 h-10" alt="Zorro Logo" />
+          <img src="../assets/zorro-kuva_transparent.png" class="w-20 h-20" alt="Zorro Logo" />
         </div>
         <h2 class="text-2xl text-white font-bold tracking-wide">Create account</h2>
       </div>

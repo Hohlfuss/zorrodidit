@@ -8,7 +8,7 @@
       
       <div class="flex flex-col items-center mb-8">
         <div class="w-14 h-14 bg-slate-950/30 border border-slate-800 rounded-xl flex items-center justify-center mb-3 shadow-lg shadow-blue-500/20 ring-1 ring-blue-500/30">
-          <span class="text-blue-500 text-2xl font-black">Z</span>
+          <img src="../assets/zorro-kuva_transparent.png" class="w-20 h-20" alt="Zorro Logo" />
         </div>
       </div>
       
