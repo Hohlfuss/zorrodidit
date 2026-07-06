@@ -18,7 +18,7 @@
       :pagination="true"
       :navigation="true"
       :modules="modules"
-      class="w-full aspect-[3/4] rounded-2xl shadow-2xl shadow-blue-900/20"
+      class="w-full aspect-3/4 rounded-2xl shadow-2xl shadow-blue-900/20"
     >
       <swiper-slide 
         v-for="item in items" 
@@ -66,6 +66,9 @@ import 'swiper/css/navigation';
 // 3. Import the specific modules we want to use
 import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
 
+// sienet
+import sieni1 from "@/assets/sienet/sieni1.png";
+
 // Tell the Swiper component to use these modules
 const modules = [EffectFlip, Pagination, Navigation];
 
@@ -77,7 +80,7 @@ const items = ref([
     description: "white base and long green curly hat.",
     material: "cotton and acrylic",
     date: "5.5.2026",
-    image: "../assets/sienet/sieni1.png"
+    image: sieni1
   },
   {
     id: 2,
