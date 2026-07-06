@@ -7,7 +7,7 @@
     <div class="bg-slate-900/40 backdrop-blur-xl p-8 rounded-2xl shadow-2xl shadow-blue-900/20 w-full max-w-md border border-slate-800 relative z-10">
       
       <div class="flex flex-col items-center mb-8">
-        <div class="w-14 h-14 bg-slate-950/30 border border-slate-800 rounded-xl flex items-center justify-center mb-3 shadow-lg shadow-blue-500/20 ring-1 ring-blue-500/30">
+        <div class="w-30 h-30 bg-slate-950/30 border border-slate-800 rounded-xl flex items-center justify-center mb-3 shadow-lg shadow-blue-500/20 ring-1 ring-blue-500/30">
           <img src="../assets/zorro-kuva_transparent.png" class="w-20 h-20" alt="Zorro Logo" />
         </div>
       </div>
