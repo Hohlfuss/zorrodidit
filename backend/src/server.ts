@@ -4,20 +4,19 @@ import { createClient } from "@supabase/supabase-js";
 import bcrypt from "bcryptjs";
 import dotenv from "dotenv";
 
+dotenv.config();
+
 const app = express();
 const port = process.env.PORT ||3_000;
+
+app.use(express.json());
+app.use(cors({
+    origin: "https://zorrodidit.uk"
+}));
 
 const supabaseUrl = process.env.SUPABASE_URL as string;
 const supabaseKey = process.env.SUPABASE_KEY as string;
 const supabase = createClient(supabaseUrl, supabaseKey);
-
-app.use(express.json());
-
-dotenv.config();
-
-app.use(cors({
-    origin: "https://zorrodidit.uk"
-}));
 
 app.get("/", (req: Request, res: Response) => {
     res.send("typescript express server is running");
