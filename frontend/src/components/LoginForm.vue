@@ -1,8 +1,8 @@
 <template>
   <div class="min-h-screen bg-slate-950 flex items-center justify-center p-4 relative overflow-hidden">
     
-   <!-- New v4 syntax -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-120 h-120 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- New v4 syntax -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-120 h-120 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="bg-slate-900/80 backdrop-blur-xl p-8 rounded-2xl shadow-2xl shadow-blue-900/20 w-full max-w-md border border-slate-800 relative z-10">
       
@@ -41,7 +41,7 @@
   </div>
 </template>
 
-
+<!--
 <template>
   <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg">
     <h2 class="text-xl font-bold mb-4">Sign In</h2>
@@ -64,6 +64,7 @@
     <router-link to="/register" class="text-blue-500">Sign up here</router-link>
   </p>
 </template>
+-->
 
 <script setup>
 

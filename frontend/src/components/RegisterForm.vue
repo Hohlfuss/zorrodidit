@@ -1,8 +1,8 @@
 <template>
   <div class="min-h-screen bg-slate-950 flex items-center justify-center p-4 relative overflow-hidden">
     
-   <!-- New v4 syntax -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-120 h-120 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- New v4 syntax -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-120 h-120 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="bg-slate-900/80 backdrop-blur-xl p-8 rounded-2xl shadow-2xl shadow-blue-900/20 w-full max-w-md border border-slate-800 relative z-10">
       
@@ -11,6 +11,7 @@
           <span class="text-blue-500 text-2xl font-black">Z</span>
         </div>
         <h2 class="text-2xl text-white font-bold tracking-wide">Zorro did it!</h2>
+        <h3 class="text-sm text-slate-400 mt-1">Create your account</h3>
       </div>
       
       <div v-if="errorMessage" class="mb-4 p-3 bg-red-950/50 border border-red-500/50 text-red-200 rounded-lg text-sm text-center">
